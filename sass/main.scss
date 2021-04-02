@@ -10,22 +10,28 @@
 }
 
 .innerContent{
-    padding: 100px 0;
-
+    padding: 50px 0;
+    // background: red;
     // audio
-    .custom-controls
-    {
-        width: 50%;
-        // background-color: red;
+
+    .thumbnail{
+        width: 100%;
         img{
-            width: 2.5vh;
-            height: auto;
-            margin-top: 15px;
-            margin-right: 10px; 
-            // background-color: lightblue;
-        }   
-        img:hover{
-            cursor: pointer;
+            width: 50%;
+        }
+        .custom-controls
+        {
+            // background-color: red;
+            img{
+                width: 2.5vh;
+                height: auto;
+                margin-top: 15px;
+                margin-right: 10px; 
+                // background-color: lightblue;
+            }   
+            img:hover{
+                cursor: pointer;
+            }
         }
     }
     // Audio

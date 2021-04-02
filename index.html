@@ -41,13 +41,22 @@
 
             <div class="tab-pane fade show active" id="music" aria-labelledby="music-tab" role="tabpanel">
                 <div class="innerContent">
-                    <audio class="container-fluid" src="music/rocky.mp3" type="audio/mp3"></audio>
+                    <audio class="container-fluid">
+                        <source src="music/rocky.mp3" type="audio/mp3"/>
+                    </audio>
+                    <div class="thumbnail container d-flex flex-column justify-content-center align-items-center m-auto">
+                        <img src="images/rocky.png" alt="audio thumbnail">
+                        <div class="audio-about mt-3">
+                            <h5>Rocky Mountain</h5>
+                            <p>John denvar</p>
+                        </div>
 
-                    <div class="custom-controls d-flex justify-content-center m-auto">
-                        <img src="images/play.svg" data-button="0"  alt="play">
-                        <img src="images/pause.svg"  data-button="1" alt="pause">
-                        <img src="images/stop.svg" data-button="2" alt="stop">
-                        <img src="images/rewind.svg" data-button="3" alt="rewind">
+                        <div class="custom-controls d-flex">
+                            <img src="images/play.svg" data-button="0"  alt="play">
+                            <img src="images/pause.svg"  data-button="1" alt="pause">
+                            <img src="images/stop.svg" data-button="2" alt="stop">
+                            <img src="images/rewind.svg" data-button="3" alt="rewind">
+                        </div>
                     </div>
                 </div>
             </div>
