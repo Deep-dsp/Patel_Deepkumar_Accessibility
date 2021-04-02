@@ -28,10 +28,13 @@
                 height: auto;
                 margin-top: 15px;
                 margin-right: 10px; 
+                // padding: 10px;
                 // background-color: lightblue;
             }   
             img:hover{
                 cursor: pointer;
+                background: #b3b3b3;
+                border-radius: 50%;
             }
         }
     }
@@ -42,4 +45,9 @@
 .collapseExample{
     position: fixed;
     top: 0;
+}
+
+.active-pop{
+    background: #b3b3b3;
+    border-radius: 50%;
 }

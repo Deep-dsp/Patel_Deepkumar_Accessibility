@@ -14,6 +14,7 @@ const canvas = document.querySelector("#progress"),
 function audioPlayer(){
     let pause = false;
     console.log("audio length", audio.currentTime);
+    
 
     var adDuration = audio.duration;
     var cadCurrent = audio.currentTime;
