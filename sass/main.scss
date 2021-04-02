@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container a{
+    padding: 8px 80px;
+    color: #292929;
+}
+
+.innerContent{
+    padding: 100px 0;
+
+    // audio
+    .custom-controls
+    {
+        width: 50%;
+        // background-color: red;
+        img{
+            width: 2.5vh;
+            height: auto;
+            margin-top: 15px;
+            margin-right: 10px; 
+            // background-color: lightblue;
+        }   
+        img:hover{
+            cursor: pointer;
+        }
+    }
+    // Audio
+}

@@ -15,19 +15,45 @@
         <h3 class="m-4 text-primary">A/V Accessibility</h3>
         <p>Make your media accessible to everyone</p>
 
-        <!-- Tab styling -->
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center nav-tabs">
+
+            <!-- Tab styling -->            
             <ul class="nav bg-light" role="tablist">
                 <li class="nav-item">
-                    <a href="#movie" id="movie-tab" class="nav-link active" aria-selected="ture" data-toggle="tab" role="tab">Movie</a>
+                    <a href="#movie" id="movie-tab" class="nav-link" aria-selected="true" data-toggle="tab" role="tab">Movie</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#music" id="music-tab" class="nav-link" aria-selected="false" data-toggle="tab" role="tab">Music</a>
+                    <a href="#music" id="music-tab" class="nav-link active" aria-selected="false" data-toggle="tab" role="tab">Music</a>
                 </li>
             </ul>
+            <!-- Tab styling -->
+            
+        </div>
+
+        <!-- Panel for each tab -->
+        <div class="tab-content">
+
+            <div class="tab-pane fade" id="movie" aria-labelledby="movie-tab" role="tabpanel">
+                <div class="innerContent">
+                    Movie Time
+                </div>
+            </div>
+
+            <div class="tab-pane fade show active" id="music" aria-labelledby="music-tab" role="tabpanel">
+                <div class="innerContent">
+                    <audio class="container-fluid" src="music/rocky.mp3" type="audio/mp3"></audio>
+
+                    <div class="custom-controls d-flex justify-content-center m-auto">
+                        <img src="images/play.svg" data-button="0"  alt="play">
+                        <img src="images/pause.svg"  data-button="1" alt="pause">
+                        <img src="images/stop.svg" data-button="2" alt="stop">
+                        <img src="images/rewind.svg" data-button="3" alt="rewind">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
+    <script type="module" src="js/main.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
