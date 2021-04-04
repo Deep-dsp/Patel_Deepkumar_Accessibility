@@ -25,7 +25,7 @@ A goal of this task is to learn about accessibility and how can we make audio an
 
 ## icons from
 
--   (www.icon8.com/)[https://icons8.com/]
+   [www.icon8.com/](https://icons8.com/)
 
 ## Author
 
