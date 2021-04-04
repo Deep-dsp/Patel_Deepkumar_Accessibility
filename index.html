@@ -19,10 +19,10 @@
             <!-- Tab styling -->            
             <ul class="nav bg-light" role="tablist">
                 <li class="nav-item">
-                    <a href="#movie" id="movie-tab" class="nav-link" aria-selected="true" data-toggle="tab" role="tab">Movie</a>
+                    <a href="#movie" id="movie-tab" class="nav-link active" aria-selected="true" data-toggle="tab" role="tab">Movie</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#music" id="music-tab" class="nav-link active" aria-selected="false" data-toggle="tab" role="tab">Music</a>
+                    <a href="#music" id="music-tab" class="nav-link" aria-selected="false" data-toggle="tab" role="tab">Music</a>
                 </li>
             </ul>
             <!-- Tab styling -->
@@ -32,14 +32,21 @@
         <!-- Panel for each tab -->
         <div class="tab-content">
 
-            <div class="tab-pane fade" id="movie" aria-labelledby="movie-tab" role="tabpanel">
+            <!-- Movie Time -->
+            <div class="tab-pane fade show active" id="movie" aria-labelledby="movie-tab" role="tabpanel">
                 <div class="innerContent">
-                    Movie Time
+                    <div class="avenge-movie">
+                        <video class="container" controls>
+                            <source src="video/avengers.mp4"/>
+                            <track label="English" kind="subtitles" srclang="en" src="vtt/avengers.vtt" default>
+                        </video>
+                    </div>
                 </div>
             </div>
-
+            <!-- Movie Time -->
             <!-- Music Container Tab -->
-            <div class="tab-pane fade show active" id="music" aria-labelledby="music-tab" role="tabpanel">
+            <div class="tab-pane fade" id="music" aria-labelledby="music-tab" role="tabpanel">
+
                 <div class="innerContent">
                     <audio class="container-fluid">
                         <source src="music/rocky.mp3" type="audio/mp3"/> <!--ontimeupdate="updatebar()"-->
