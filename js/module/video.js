@@ -12,10 +12,12 @@ player.removeAttribute('controls');
 playPauseBtn.addEventListener("click", ()=>{
      if(player.paused) {
         player.play();
-        playPauseBtn.textContent = 'Pause';
+        playPauseBtn.innerHTML = '<img src="https://img.icons8.com/wired/30/000000/circled-pause.png"/>';
+        // playPauseBtn.textContent = 'Pause';
       } else {
         player.pause();
-        playPauseBtn.textContent = 'Play';
+        playPauseBtn.innerHTML = "<img src='https://img.icons8.com/wired/30/000000/play-button-circled.png'/>";
+        // playPauseBtn.textContent = 'Play';
       }
 });
 
