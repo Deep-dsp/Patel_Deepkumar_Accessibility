@@ -37,8 +37,8 @@
                 <div class="innerContent">
                     <div class="avenge-movie">
                         <video class="container" controls>
-                            <source src="video/avengers.mp4"/>
-                            <track label="English" kind="subtitles" srclang="en" src="vtt/avengers.vtt">
+                            <source src="video/avengers.mp4" type="video/mp4"/>
+                            <!-- <track label="English" kind="subtitles" srclang="en" src="vtt/avengers.vtt"> -->
                         </video>
                         <div class="controls container">
                             <button class="playpause"><img src="https://img.icons8.com/wired/30/000000/play-button-circled.png"/></button>
@@ -46,6 +46,8 @@
                             <button class="rwd"><img src="https://img.icons8.com/dotty/30/000000/rewind-button-round.png"/></button>
                             <button class="fwd"><img src="https://img.icons8.com/dotty/30/000000/fast-forward-round.png"/></button>
                             <div class="time">00:00</div>
+                            <button class="caption"><span>CC</span></button>
+                            <button id="mute" type="button" data-caption="mute"><img src="https://img.icons8.com/dotty/30/000000/low-volume.png"/></button>
                           </div>
                     </div>
                 </div>

@@ -20,6 +20,11 @@
     height: 100%;
     width: 50px;
     cursor: pointer;
+
+    span{
+        font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 2px;
+    }
   }
   
   button:hover, button:focus {
