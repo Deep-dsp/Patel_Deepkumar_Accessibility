@@ -7,6 +7,8 @@ const caption = document.querySelector('.caption');
 const mute = document.querySelector('#mute');
 
 const player = document.querySelector('video');
+const progress = document.getElementById('progress');
+const progressBar = document.getElementById('progress-bar');
 
 player.removeAttribute('controls');
 
@@ -45,33 +47,36 @@ fwdBtn.addEventListener("click",()=>{
     }
 });
 
-// player.ontimeupdate = function() {
-//     let minutes = Math.floor(player.currentTime / 60);
-//     let seconds = Math.floor(player.currentTime - minutes * 60);
-//     let minuteValue;
-//     let secondValue;
+player.addEventListener("timeupdate", progressTime);
+
+function progressTime(){
+    let minutes = Math.floor(player.currentTime / 60);
+    let seconds = Math.floor(player.currentTime - minutes * 60);
+    let minuteValue;
+    let secondValue;
   
-//     if (minutes<10) {
-//       minuteValue = "0" + minutes;
-//     } else {
-//       minuteValue = minutes;
-//     }
+    if (minutes<10) {
+      minuteValue = "0" + minutes;
+    } else {
+      minuteValue = minutes;
+    }
   
-//     if (seconds<10) {
-//       secondValue = "0" + seconds;
-//     } else {
-//       secondValue = seconds;
-//     }
+    if (seconds<10) {
+      secondValue = "0" + seconds;
+    } else {
+      secondValue = seconds;
+    }
   
-//     mediaTime = minuteValue + ":" + secondValue;
-//     timeLabel.textContent = mediaTime;
-//   };
+    let mediaTime = minuteValue + ":" + secondValue;
+    timeLabel.textContent = mediaTime;
+}
 
 //  caption
 caption.addEventListener("click", ()=>{
     player.appendChild = '<track label="English" kind="subtitles" srclang="en" src="vtt/avengers.vtt">';
 });
- 
+
+// Audio-mute functionality
 mute.addEventListener("click", ()=>{
     
     if(player.muted){
@@ -82,4 +87,15 @@ mute.addEventListener("click", ()=>{
         player.muted = !player.muted;
         mute.innerHTML = '<img src="https://img.icons8.com/dotty/30/000000/no-audio.png"/>';
     }
-})
+});
+
+// Progress Bar
+player.addEventListener('loadedmetadata', function() {
+    progress.setAttribute('max', player.duration);
+ });
+
+player.addEventListener('timeupdate', function() {
+    if (!progress.getAttribute('max')) progress.setAttribute('max', player.duration);
+    progress.value = player.currentTime;
+    progressBar.style.width = Math.floor((player.currentTime / player.duration) * 100) + '%';
+});
