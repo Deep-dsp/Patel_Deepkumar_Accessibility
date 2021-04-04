@@ -81,7 +81,7 @@ mute.addEventListener("click", ()=>{
     
     if(player.muted){
         player.muted = !player.muted;
-        mute.innerHTML = '<img src="https://img.icons8.com/dotty/30/000000/low-volume.png"/>';
+        mute.innerHTML = '<img src="https://img.icons8.com/dotty/30/000000/high-volume.png"/>';
         console.log("if");
     }else{
         player.muted = !player.muted;
@@ -98,4 +98,17 @@ player.addEventListener('timeupdate', function() {
     if (!progress.getAttribute('max')) progress.setAttribute('max', player.duration);
     progress.value = player.currentTime;
     progressBar.style.width = Math.floor((player.currentTime / player.duration) * 100) + '%';
+});
+
+// Caption/subtitle
+
+caption.addEventListener('click', ()=>{
+    // player.querySelector("source").appendChild = '<track label="English" kind="subtitles" srclang="en" src="vtt/avengers.vtt">';
+    let track = document.createElement("track");
+    track.setAttribute('label', 'English');
+    track.setAttribute('src', 'vtt/avengers.vtt');
+    track.setAttribute('kind', 'subtitles');
+    track.setAttribute('srclang', 'en');
+    console.log(track);
+    player.appendChild(track);
 });
