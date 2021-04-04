@@ -1,3 +1,5 @@
+import "./module/video.js";
+
 const custom = document.querySelector('.custom-controls'),
       button = custom.querySelectorAll('img'),
       audio = document.querySelector('.innerContent audio');
