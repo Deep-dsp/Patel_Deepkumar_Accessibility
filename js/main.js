@@ -60,3 +60,5 @@ function covertedElapsedTime(inputseconds){
 }
 
 button.forEach(data=>data.addEventListener("click",audioPlayer));
+
+// tab panel
