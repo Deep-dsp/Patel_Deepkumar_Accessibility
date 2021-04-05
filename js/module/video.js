@@ -101,14 +101,17 @@ player.addEventListener('timeupdate', function() {
 });
 
 // Caption/subtitle
-
+player.textTracks[0].mode = 'hidden';
+caption.querySelector("span").classList.add("line-through");
 caption.addEventListener('click', ()=>{
-    // player.querySelector("source").appendChild = '<track label="English" kind="subtitles" srclang="en" src="vtt/avengers.vtt">';
-    let track = document.createElement("track");
-    track.setAttribute('label', 'English');
-    track.setAttribute('src', 'vtt/avengers.vtt');
-    track.setAttribute('kind', 'subtitles');
-    track.setAttribute('srclang', 'en');
-    console.log(track);
-    player.appendChild(track);
+
+    if(player.textTracks[0].mode == 'hidden'){
+        player.textTracks[0].mode = 'showing';
+        caption.querySelector("span").classList.add("line");
+    }
+    else{
+        caption.querySelector("span").classList.remove("line");
+        caption.querySelector("span").classList.add("line-through");
+        player.textTracks[0].mode = 'hidden';
+    }
 });
