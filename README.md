@@ -23,6 +23,10 @@ A goal of this task is to learn about accessibility and how can we make audio an
 -   MDN (Mozilla Developer Network)
 -   W3C
 
+## Roadmap and step to consider for accesibility
+
+   [A/V accessibility Roadmap](https://docs.google.com/document/d/1RuCADiqIzE_wQyVoPUhx2hrhDjB8u9_h79WyZlQUqVM/edit)
+
 ## icons from
 
    [www.icon8.com/](https://icons8.com/)
