@@ -43,7 +43,7 @@ fwdBtn.addEventListener("click",()=>{
     if(player.currentTime >= player.duration || player.paused) {
         player.pause();
         player.currentTime = 0;
-        playPauseBtn.innerHTML = "<img src='https://img.icons8.com/wired/50/000000/play-button-circled.png'/>";
+        playPauseBtn.innerHTML = '<i class="play circle icon"></i>';
     }
 });
 
