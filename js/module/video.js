@@ -16,11 +16,11 @@ player.removeAttribute('controls');
 playPauseBtn.addEventListener("click", ()=>{
      if(player.paused) {
         player.play();
-        playPauseBtn.innerHTML = '<img src="https://img.icons8.com/wired/30/000000/circled-pause.png"/>';
+        playPauseBtn.innerHTML = '<i class="pause circle icon"></i>';
         // playPauseBtn.textContent = 'Pause';
       } else {
         player.pause();
-        playPauseBtn.innerHTML = "<img src='https://img.icons8.com/wired/30/000000/play-button-circled.png'/>";
+        playPauseBtn.innerHTML = '<i class="play circle icon"></i>';
         // playPauseBtn.textContent = 'Play';
       }
 });
@@ -30,7 +30,7 @@ playPauseBtn.addEventListener("click", ()=>{
 stopBtn.addEventListener("click", ()=>{
     player.pause();
     player.currentTime = 0;
-    playPauseBtn.innerHTML = "<img src='https://img.icons8.com/wired/30/000000/play-button-circled.png'/>";
+    playPauseBtn.innerHTML = '<i class="play circle icon"></i>';
 });
 
 // Rewind
@@ -43,7 +43,7 @@ fwdBtn.addEventListener("click",()=>{
     if(player.currentTime >= player.duration || player.paused) {
         player.pause();
         player.currentTime = 0;
-        playPauseBtn.innerHTML = "<img src='https://img.icons8.com/wired/30/000000/play-button-circled.png'/>";
+        playPauseBtn.innerHTML = "<img src='https://img.icons8.com/wired/50/000000/play-button-circled.png'/>";
     }
 });
 
@@ -81,11 +81,11 @@ mute.addEventListener("click", ()=>{
     
     if(player.muted){
         player.muted = !player.muted;
-        mute.innerHTML = '<img src="https://img.icons8.com/dotty/30/000000/high-volume.png"/>';
+        mute.innerHTML = '<i class="volume up icon"></i>';
         console.log("if");
     }else{
         player.muted = !player.muted;
-        mute.innerHTML = '<img src="https://img.icons8.com/dotty/30/000000/no-audio.png"/>';
+        mute.innerHTML = '<i class="volume off icon"></i>';
     }
 });
 
@@ -102,16 +102,17 @@ player.addEventListener('timeupdate', function() {
 
 // Caption/subtitle
 player.textTracks[0].mode = 'hidden';
-caption.querySelector("span").classList.add("line-through");
+// caption.querySelector("span").classList.add("line-through");
 caption.addEventListener('click', ()=>{
 
     if(player.textTracks[0].mode == 'hidden'){
         player.textTracks[0].mode = 'showing';
-        caption.querySelector("span").classList.add("line");
+        caption.innerHTML = '<i class="closed captioning icon"></i>';
     }
     else{
-        caption.querySelector("span").classList.remove("line");
-        caption.querySelector("span").classList.add("line-through");
+        // caption.querySelector(".closed").classList.remove("line");
+        // caption.querySelector(".closed").classList.add("line-through");
         player.textTracks[0].mode = 'hidden';
+        caption.innerHTML = '<i class="closed captioning outline icon"></i>';
     }
 });

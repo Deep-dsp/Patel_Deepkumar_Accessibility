@@ -10,33 +10,44 @@
   
   .controls {
     height: 50px;
-  }
   
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // float: left;
-    border: 0;
-    height: 100%;
-    width: 15%;
-    margin: 0 auto;
-    cursor: pointer;
-    background: none;
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // float: left;
+      border: 0;
+      height: 100%;
+      width: 15%;
+      margin: 0 auto;
+      cursor: pointer;
+      background: none;
 
-    span{
-        font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        letter-spacing: 2px;
+      i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: red;
+        font-size: 2rem;
+      }
+
+      span{
+          font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          font-size: 2.2rem;
+          color: red;
+          letter-spacing: 2px;
+      }
     }
-  }
-  
-  button:hover, button:focus {
-    background-color: #ddd;
-  }
-  
-  button:active {
-    background-color: #ccc;
-  }
+    
+    button:hover, button:focus {
+      background: #b4ffc9;
+    }
+    
+    button:active {
+      background: #b4ffc9;
+    }
+}
   
   .controls div {
     font-size: 12px;
