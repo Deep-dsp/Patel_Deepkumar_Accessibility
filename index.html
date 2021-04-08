@@ -20,13 +20,13 @@
 
             <!-- Tab styling -->            
             <ul class="nav bg-light" role="tablist">
-                <li class="nav-item">
+                <li class="nav-item" data-menu="avengers">
                     <a href="#movie" id="movie-tab" class="nav-link active" aria-selected="true" data-toggle="tab" role="tab">Movie</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" data-menu="music">
                     <a href="#music" id="music-tab" class="nav-link" aria-selected="false" data-toggle="tab" role="tab">Music</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" data-menu="zootopia">
                     <a href="#show" id="show-tab" class="nav-link" aria-selected="false" data-toggle="tab" role="tab">show</a>
                 </li>
             </ul>
@@ -52,12 +52,12 @@
                             </progress>
                          </div>
                         <div class="controls container d-flex justify-content-center">
-                            <button class="playpause"><i class="play circle icon"></i></button>
-                            <button class="stop"><i class="stop circle icon"></i></button>
-                            <button class="rwd"><i class="backward icon"></i></button>
-                            <button class="fwd"><i class="forward icon"></i></button>
-                            <button class="caption"><i class="closed captioning outline icon"></i></button>
-                            <button id="mute" type="button" data-caption="mute"><i class="volume up icon"></i></button>
+                            <button class="playpause" data-media="0"><i class="play circle icon"></i></button>
+                            <button class="stop" data-media="1"><i class="stop circle icon"></i></button>
+                            <button class="rwd" data-media="2"><i class="backward icon"></i></button>
+                            <button class="fwd" data-media="3"><i class="forward icon"></i></button>
+                            <button class="caption" data-media="4"><i class="closed captioning outline icon"></i></button>
+                            <button id="mute" type="button" data-caption="mute" data-media="5"><i class="volume up icon"></i></button>
                           </div>
                     </div>
                 </div>
@@ -163,9 +163,9 @@
             <div class="tab-pane fade" id="show" aria-labelledby="show-tab" role="tabpanel">
                 <div class="innerContent">
                     <div class="avenge-movie">
-                        <video class="container" data-button="0">
+                        <video class="container zoo" data-button="0">
                             <source src="video/zootopia.mp4" type="video/mp4"/>
-                            <!-- <track label="English" kind="subtitles" srclang="en" src="vtt/avengers.vtt"> -->
+                            <track label="English" kind="subtitles" srclang="en" src="vtt/zoo.vtt">
                         </video>
                         <div class="progress-con d-flex align-items-center">
                             <div class="time">00:00</div>
@@ -173,13 +173,13 @@
                                <span id="progress-bar"></span>
                             </progress>
                          </div>
-                        <div class="controls container d-flex justify-content-center">
-                            <button class="playpause"><img src="https://img.icons8.com/wired/30/000000/play-button-circled.png"/></button>
-                            <button class="stop"><img src="https://img.icons8.com/dotty/30/000000/stop-circled.png"/></button>
-                            <button class="rwd"><img src="https://img.icons8.com/dotty/30/000000/rewind-button-round.png"/></button>
-                            <button class="fwd"><img src="https://img.icons8.com/dotty/30/000000/fast-forward-round.png"/></button>
-                            <button class="caption"><span>CC</span></button>
-                            <button id="mute" type="button"><img src="https://img.icons8.com/dotty/30/000000/high-volume.png"/></button>
+                        <div class="controls container d-flex justify-content-center show-controls">
+                            <button class="playpausez" data-media="6"><i class="play circle icon"></i></button>
+                            <button class="stopz" data-media="7"><i class="stop circle icon"></i></button>
+                            <button class="rwdz" data-media="8"><i class="backward icon"></i></button>
+                            <button class="fwdz" data-media="9"><i class="forward icon"></i></button>
+                            <button class="captionz" data-media="10"><i class="closed captioning outline icon"></i></button>
+                            <button id="mutez" type="button" data-media="11"><i class="volume up icon"></i></button>
                           </div>
                     </div>
                 </div>

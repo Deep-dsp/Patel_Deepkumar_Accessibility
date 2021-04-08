@@ -1,4 +1,5 @@
 import "./module/video.js";
+import "./module/videoloop.js";
 
 const custom = document.querySelector('.custom-controls'),
       button = custom.querySelectorAll('img'),
